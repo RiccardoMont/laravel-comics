@@ -90,22 +90,210 @@ header {
     }
 }
 
-/*END Header region*/
-
-/*Main region*/
-
 .jumbotron {
     background-image: url("../images/jumbotron.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 400px;
 }
+
+/*END Header region*/
+
+/*Main region*/
+
+
+
+.content {
+    background-color: var(--bg-main-black);
+
+    & h3 {
+        display: inline-block;
+        padding: 1rem;
+        background-color: var(--bg-text-lightblue);
+        color: var(--main-footer-titles-white);
+        margin-top: -20px;
+    }
+
+    & h2 {
+        color: var(--main-footer-titles-white);
+    }
+
+    & .row {
+        align-items: start;
+        gap: 1rem;
+
+        & .comicCard {
+            width: calc((100%/12)*2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 -1rem;
+            padding: 1rem;
+
+            & .maskComic {
+                overflow: hidden;
+                width: 150px;
+                height: 200px;
+                max-width: 150px;
+                max-height: 200px;
+
+                & .resizeComic {
+                    height: 200px;
+
+                }
+
+            }
+
+            & h4 {
+                font-weight: 400;
+                color: var(--main-footer-titles-white);
+            }
+        }
+    }
+
+    & .loadMore {
+        display: flex;
+        justify-content: center;
+    }
+
+    & button {
+        background-color: var(--bg-text-lightblue);
+        margin: 2rem;
+        padding: 1rem;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--main-footer-titles-white);
+        border: 1px solid var(--bg-text-lightblue);
+        cursor: pointer;
+    }
+
+    & button:hover {
+
+        background-color: rgb(8, 42, 122);
+    }
+}
+
+.content-action-comics {
+    background-color: var(--main-footer-titles-white);
+
+    & .bluebar {
+        background-color: var(--bg-text-lightblue);
+        height: 100px;
+    }
+
+    & .comic-selected {
+        position: relative;
+        top: -290px;
+
+
+        & .resizeComic {
+            height: 250px;
+        }
+    }
+
+    & h2 {
+        color: var(--main-footer-titles-white);
+    }
+
+    & .row {
+        align-items: start;
+        gap: 1rem;
+
+        & .comicCard {
+            width: calc((100%/12)*2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 -1rem;
+            padding: 1rem;
+
+            & .maskComic {
+                overflow: hidden;
+                width: 150px;
+                height: 200px;
+                max-width: 150px;
+                max-height: 200px;
+
+                & .resizeComic {
+                    height: 200px;
+
+                }
+
+            }
+
+            & h4 {
+                font-weight: 400;
+                color: var(--main-footer-titles-white);
+            }
+        }
+    }
+
+    & .loadMore {
+        display: flex;
+        justify-content: center;
+    }
+
+    & button {
+        background-color: var(--bg-text-lightblue);
+        margin: 2rem;
+        padding: 1rem;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--main-footer-titles-white);
+        border: 1px solid var(--bg-text-lightblue);
+        cursor: pointer;
+    }
+
+    & button:hover {
+
+        background-color: rgb(8, 42, 122);
+    }
+}
+
+.comicsLocations {
+    height: 18vh;
+    width: 100vw;
+    background-color: var(--bg-text-lightblue);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    & .row {
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & .singleIcon {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            text-decoration: none;
+            cursor: pointer;
+
+            .resizeIcon {
+                max-width: 65px;
+                max-height: 65px;
+            }
+
+            & span {
+                color: var(--main-footer-titles-white);
+                font-size: 15px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+}
+
 /*END Main region*/
 
 /*Footer region*/
 
 .categories {
-    background-image: url('/dc-logo-bg.png'), url('/footer-bg.jpg');
+    background-image: url('../images/dc-logo-bg.png'), url('../images/footer-bg.jpg');
     background-repeat: no-repeat, no-repeat;
     background-size: 500px, cover;
     background-position-x: 80%;

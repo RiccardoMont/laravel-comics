@@ -17,11 +17,15 @@ Route::get('/', function () {
 
 
     $comics = config('comics.comics');
-    //dd($comics);
-
     return view('guests.comics', compact('comics'));
 
+});
 
+Route::get('/action-comics', function () {
+
+
+    $comics = config('comics.comics');
+    return view('guests.action-comics', compact('comics'));
 
 });
 

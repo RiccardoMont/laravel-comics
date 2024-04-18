@@ -57,7 +57,11 @@
                 <button>SIGN-UP NOW!</button>
                 <div class="socials">
                     <h3>FOLLOW US</h3>
-                    <a href="" v-for="logo in loghi"><img :src="logo.img" :alt="logo.text"></a>
+                    <a href=""><img src="{{ Vite::asset('resources/images/footer-facebook.png')}}" alt=""></a>
+                    <a href=""><img src="{{ Vite::asset('resources/images/footer-periscope.png')}}" alt=""></a>
+                    <a href=""><img src="{{ Vite::asset('resources/images/footer-pinterest.png')}}" alt=""></a>
+                    <a href=""><img src="{{ Vite::asset('resources/images/footer-twitter.png')}}" alt=""></a>
+                    <a href=""><img src="{{ Vite::asset('resources/images/footer-youtube.png')}}" alt=""></a>
                 </div>
             </div>
         </div>
