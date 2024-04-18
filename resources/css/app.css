@@ -180,11 +180,13 @@ header {
     & .bluebar {
         background-color: var(--bg-text-lightblue);
         height: 100px;
+        margin-bottom: 32px;
     }
 
+
     & .comic-selected {
-        position: relative;
-        top: -290px;
+        position: absolute;
+        top: 340px;
 
 
         & .resizeComic {
@@ -192,63 +194,89 @@ header {
         }
     }
 
-    & h2 {
-        color: var(--main-footer-titles-white);
-    }
-
     & .row {
+        
         align-items: start;
-        gap: 1rem;
+        margin-bottom: 32px;
 
-        & .comicCard {
-            width: calc((100%/12)*2);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 -1rem;
-            padding: 1rem;
+        & .texts {
+            width: 65%;
+        }
 
-            & .maskComic {
-                overflow: hidden;
-                width: 150px;
-                height: 200px;
-                max-width: 150px;
-                max-height: 200px;
-
-                & .resizeComic {
-                    height: 200px;
-
-                }
-
-            }
+        & .adv{
 
             & h4 {
-                font-weight: 400;
-                color: var(--main-footer-titles-white);
+                text-align: right;
             }
+
         }
     }
 
-    & .loadMore {
-        display: flex;
-        justify-content: center;
-    }
+}
 
-    & button {
-        background-color: var(--bg-text-lightblue);
-        margin: 2rem;
-        padding: 1rem;
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--main-footer-titles-white);
-        border: 1px solid var(--bg-text-lightblue);
-        cursor: pointer;
-    }
+.content-action-comics-info{
+    background-color: rgb(228, 227, 227);
 
-    & button:hover {
+    & .row{
+        
+        align-items: start;
+        
 
-        background-color: rgb(8, 42, 122);
+        & .talent{
+            width: 50%;
+            padding: 32px;
+
+            
+            & table{
+                border-collapse: collapse;
+                width: 100%;
+
+                & tr{
+                    
+                    border-bottom: 1px solid var(--bg-socials);
+
+
+                    & th{
+                        padding: 16px 0;
+                        width: 50%;
+                        text-align: left;
+                        border-bottom: 1px solid var(--bg-socials);
+                    }
+                    & td{
+                        padding: 16px 0;
+                        width: 50%;
+                        text-align: left;
+                        border-bottom: 1px solid var(--bg-socials);
+                    }
+                }
+            }
+
+        }
+
+        & .specs{
+            width: 50%;
+            padding: 32px;
+            & table{
+                border-collapse: collapse;
+                width: 100%;
+                & tr{
+
+                    & th{
+                        padding: 16px 0;
+                        width: 50%;
+                        text-align: left;
+                        border-bottom: 1px solid var(--bg-socials);
+                    }
+                    & td{
+                        padding: 16px 0;
+                        width: 50%;
+                        text-align: left;
+                        border-bottom: 1px solid var(--bg-socials);
+                    }
+                }
+                
+            }
+        }
     }
 }
 
