@@ -19,13 +19,13 @@ Route::get('/', function () {
     $comics = config('comics.comics');
     return view('guests.comics', compact('comics'));
 
-});
+})->name('home');
 
-Route::get('/action-comics', function () {
 
+Route::get('/single_product', function () {
 
     $comics = config('comics.comics');
-    return view('guests.action-comics', compact('comics'));
+    return view('guests.single_product', compact('comics'));
 
-});
+})->name('single_product');
 

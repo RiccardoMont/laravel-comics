@@ -1,18 +1,30 @@
 @extends('layouts.app')
 
+
 @section('content')
 
 <div class="content-action-comics">
     <div class="bluebar"></div>
     <div class="container">
         <div class="comic-selected">
-            <img class="resizeComic" src="{{$comics[0]['thumb']}}" alt="">
+            <img class="resizeComic" src="{{$comics[$_GET['index']]['thumb']}}" alt="">
         </div>
         <div class="row">
             <div class="texts">
-                <h2>{{$comics[0]['title']}}</h2>
-                <div class="price-quantity"></div>
-                <p>{{$comics[0]['description']}}</p>
+                <h2>{{$comics[$_GET['index']]['title']}}</h2>
+                <div class="price-quantity">
+                    <div class="price">
+                        <strong>U.S. Price <span class="white">{{$comics[$_GET['index']]['price']}}</span></strong>
+                        <span class="available">AVAILABLE</span>
+                    </div>
+                    <select class="quantity" name="quantity" id="">
+                        <option value="">Check Availability</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3+</option>
+                    </select>
+                </div>
+                <p>{{$comics[$_GET['index']]['description']}}</p>
             </div>
             <div class="adv">
                 <h4>ADVERTISEMENT</h4>
@@ -42,22 +54,20 @@
                 <table>
                     <tr>
                         <th>Series:</th>
-                        <td>{{$comics[0]['series']}}</td>
+                        <td>{{$comics[$_GET['index']]['series']}}</td>
                     </tr>
                     <tr>
                         <th>U.S. Price:</th>
-                        <td>{{$comics[0]['price']}}</td>
+                        <td>{{$comics[$_GET['index']]['price']}}</td>
                     </tr>
                     <tr>
                         <th>On Sale Date</th>
-                        <td>{{$comics[0]['sale_date']}}</td>
+                        <td>{{$comics[$_GET['index']]['sale_date']}}</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    
-    
 </div>
 
 @endsection

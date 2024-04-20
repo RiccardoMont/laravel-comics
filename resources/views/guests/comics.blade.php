@@ -8,12 +8,14 @@
             <h3>Current Series</h3>
             <div class="row">
             @foreach($comics as $comic)
-                <div class="comicCard">
+            <?php $index = array_search($comic, $comics); ?>
+            <!--Uso il metodo get nella stringa dell'url per poter poi passare l'indice della carta cliccata pagina single_product del fumetto selezionato -->
+                <a href="{{route('single_product')}}?index={{$index}}" class="comicCard">
                     <div class="maskComic">
                         <img class="resizeComic" src="{{$comic['thumb']}}" alt="">
                     </div>
                     <h4>{{$comic['title']}}</h4>
-                </div>
+                </a>
             @endforeach
             </div>
             <div class="loadMore">

@@ -7,6 +7,7 @@
 
 body {
     font-family: 'open sans', 'sans serif';
+    overflow-x: hidden;
 }
 
 :root {
@@ -16,6 +17,9 @@ body {
     --main-footer-titles-white: #fefcf7;
     --footer-text-grey: #83867e;
     --bg-socials: #303030;
+    --bg-priceavailable-green: #37b700;
+    --text-available-lightgreen: #92d677;
+    --bg-talent-specs-lightgrey: #e4e3e3;
 }
 
 .container {
@@ -195,15 +199,48 @@ header {
     }
 
     & .row {
-        
+
         align-items: start;
         margin-bottom: 32px;
+
+        & .price-quantity {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+            background-color: var(--bg-priceavailable-green);
+            margin: 1rem 0;
+
+            & .price {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                padding: 10px 5px;
+                font-weight: 700;
+                color: var(--text-available-lightgreen);
+
+                & .white{
+                    color: var(--main-footer-titles-white);
+                }
+
+            }
+
+            & .quantity {
+                padding: 10px 5px;
+                border: 0px;
+                border-left: 1px solid black;
+                background-color: var(--bg-priceavailable-green);
+                color: var(--main-footer-titles-white);
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
 
         & .texts {
             width: 65%;
         }
 
-        & .adv{
+        & .adv {
 
             & h4 {
                 text-align: right;
@@ -214,35 +251,37 @@ header {
 
 }
 
-.content-action-comics-info{
-    background-color: rgb(228, 227, 227);
+.content-action-comics-info {
+    background-color: var(--bg-talent-specs-lightgrey);
 
-    & .row{
-        
+    & .row {
+
         align-items: start;
-        
 
-        & .talent{
+
+
+        & .talent {
             width: 50%;
             padding: 32px;
 
-            
-            & table{
+
+            & table {
                 border-collapse: collapse;
                 width: 100%;
 
-                & tr{
-                    
+                & tr {
+
                     border-bottom: 1px solid var(--bg-socials);
 
 
-                    & th{
+                    & th {
                         padding: 16px 0;
                         width: 50%;
                         text-align: left;
                         border-bottom: 1px solid var(--bg-socials);
                     }
-                    & td{
+
+                    & td {
                         padding: 16px 0;
                         width: 50%;
                         text-align: left;
@@ -253,28 +292,31 @@ header {
 
         }
 
-        & .specs{
+        & .specs {
             width: 50%;
             padding: 32px;
-            & table{
+
+            & table {
                 border-collapse: collapse;
                 width: 100%;
-                & tr{
 
-                    & th{
+                & tr {
+
+                    & th {
                         padding: 16px 0;
                         width: 50%;
                         text-align: left;
                         border-bottom: 1px solid var(--bg-socials);
                     }
-                    & td{
+
+                    & td {
                         padding: 16px 0;
                         width: 50%;
                         text-align: left;
                         border-bottom: 1px solid var(--bg-socials);
                     }
                 }
-                
+
             }
         }
     }
